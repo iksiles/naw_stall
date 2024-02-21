@@ -19,9 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Ruta del index
 Route::get('/index', [newsletterController::class, 'index'])->name('ns.index');
 
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('ns.login');
-Route::post('/register', [AuthController::class, 'register'])->name('ns.register');
-Route::post('/login', [AuthController::class, 'login'])->name('ns.login.submit');
+//Rutas de creación de usuario
+Route::get('/login', [authController::class, 'showLoginForm'])->name('ns.login');
+Route::post('/register', [authController::class, 'register'])->name('ns.register');
+Route::post('/login', [authController::class, 'login'])->name('ns.login.submit');
+
+//Rutas del perfil
+Route::get('/profile', [authController::class, 'showProfile'])->name('ns.profile');
 

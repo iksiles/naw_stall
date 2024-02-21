@@ -10,10 +10,14 @@ use Auth;
 
 class authController extends Controller
 {
-
     public function showLoginForm()
     {
         return view('ns.login', ['formType' => 'login']);
+    }
+
+    public function showProfile()
+    {
+        return view('ns.profile');
     }
 
     public function register(Request $request)

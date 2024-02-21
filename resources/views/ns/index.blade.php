@@ -15,7 +15,7 @@
             <a class="navbar-brand" href="#">Wiki</a>
             <a class="navbar-brand" href="#">Foro</a>
             @if (Auth::check()) <!-- Verificar si el usuario ha iniciado sesión -->
-            <a href="#" class="navbar-brand">
+            <a href="{{ route('ns.profile') }}" class="navbar-brand">
                 <img src="{{ url('img/profilePic/'.Auth::user()->img) }}" alt="Foto de perfil" style="width: 30px; height: 30px; border-radius: 50%;">
             </a>
         @else

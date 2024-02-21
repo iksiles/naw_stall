@@ -25,8 +25,14 @@
         <h2 class="text-light text-center">Iniciar sesión</h2>
         <form enctype="multipart/form-data" method ="POST" action="{{ route('ns.login.submit') }}">
             @csrf
-            <input type="email" name="email" placeholder="Correo electrónico">
-            <input type="password" name="password" placeholder="Contraseña">
+            <input class="form-control" type="email" name="email" placeholder="Correo electrónico">
+            @error('')
+            <p class="error-message">{{ $message }}</p>
+            @enderror
+            <input class="form-control" type="password" name="password" placeholder="Contraseña">
+            @error('')
+            <p class="error-message">{{ $message }}</p>
+            @enderror
             <button type="submit">Iniciar sesión</button>
         </form>
     </div>
@@ -35,10 +41,20 @@
         <h2 class="text-light text-center">Registrarse</h2>
         <form enctype="multipart/form-data" method ="POST" action="{{ route('ns.register') }}">
             @csrf
-            <input type="text" name="name" placeholder="Nombre">
-            <input type="email" name="email" placeholder="Correo electrónico">
-            <input type="password" name="password" placeholder="Contraseña">
-            <input class="form-control" type="file" name="img" placeholder="Imagen">
+            <input class="form-control" type="text" name="name" placeholder="Nombre" value="{{ old('name') }}">
+            @error('')
+            <p class="error-message">{{ $message }}</p>
+            @enderror
+            <input class="form-control" type="email" name="email" placeholder="Correo electrónico" value="{{ old('email') }}">
+            @error('')
+            <p class="error-message">{{ $message }}</p>
+            @enderror
+            <input class="form-control" type="password" name="password" placeholder="Contraseña">
+            @error('')
+            <p class="error-message">{{ $message }}</p>
+            @enderror
+            <label class="form-label text-light">Foto de perfil</label>
+            <input class="form-control" type="file" name="img">
             <button type="submit">Registrarse</button>
         </form>
     </div>
