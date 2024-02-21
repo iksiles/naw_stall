@@ -1,8 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "dev": "vite",
-        "build": "vite build"
+        "build-css": "tailwindcss build resources/css/styles.css -o resources/css/styles.css"
     },
     "devDependencies": {
         "axios": "^1.1.2",
@@ -10,5 +9,8 @@
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "tailwindcss": "^3.4.1"
     }
 }

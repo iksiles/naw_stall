@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\newsletterController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', [newsletterController::class, 'index'])->name('ns.index');
+Route::get('/index', [HomeController::class, 'index'])->name('ns.index');
+Route::get('/News', [ NewsController::class, 'News'])->name('ns.news');

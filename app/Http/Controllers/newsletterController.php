@@ -9,7 +9,7 @@ use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Http;
 use DOMDocument;
 
-class newsletterController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
