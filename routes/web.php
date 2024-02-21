@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\newsletterController;
+use App\Http\Controllers\authController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/index', [newsletterController::class, 'index'])->name('ns.index');
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('ns.login');
+Route::post('/register', [AuthController::class, 'register'])->name('ns.register');
+Route::post('/login', [AuthController::class, 'login'])->name('ns.login.submit');
+
