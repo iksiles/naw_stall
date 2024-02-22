@@ -3,24 +3,39 @@
 
 <head>
     <title>Naw Stall - Newsletter</title>
-    <!-- @include('ns.layouts.boot') -->
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    @include('ns.layouts.boot')
+    <link rel="stylesheet" href="{{ asset('css/Style.css') }}">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 
 </head>
 
-<body class="bg-red-600">
-    <nav class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <a class="navbar-brand" href="{{ route('ns.index') }}">Index</a>
-            <a class="navbar-brand" href="{{ route('ns.news') }}">Newsletter</a>
-            <a class="navbar-brand" href="#">Wiki</a>
-            <a class="navbar-brand" href="#">Opciones</a>
-            <a class="navbar-brand" href="#">Foro</a>
-        </div>
-    </nav>
-    <h2 class="text-white center uppercase">Bienvenido a NAW STALL!</h2>
+<body class="bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 min-h-screen">
+    
+    <nav class="bg-red-200 w-full h-px-60">
 
-    <ul class="text-light">
+        <div class="space-x-5 h-13 w-ful p-2">
+            <a href="" class="bg-green-800 rounded-t-lg pb-2.5 pt-1.5 px-2">Home</a>
+            <a href="" class="bg-blue-300 rounded-lg p-2">News</a>
+            <a href="" class="bg-gray-500 rounded-lg p-2">Wiki</a>
+            <a href="" class="bg-purple-200 rounded-lg p-2">Forum</a>
+        </div>
+
+    </nav>
+
+
+    <div class="bg-red-500">
+        <h2 class="text-white ">Bienvenido a NAW STALL!</h2>
+    </div> 
+
+    <ul class="grid gap-5 grid-cols-2 grid-rows-4">
         @foreach($entries as $entry)
             <li>
                 <h2>{{ $entry->title }}</h2>

@@ -1,7 +1,7 @@
 module.exports = {
   content: ['resources/css/style.css', 'resources/views/**/*.blade.php'],
   theme: {
-    screens: {
+    screens: {  
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 

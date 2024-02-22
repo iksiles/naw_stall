@@ -20,9 +20,9 @@
     </nav>
     <h2 class="text-light text-center">Latest news about MSFS and Addons</h2>
 
-    <ul class="text-light">
+    <ul class="text-white">
         @foreach($entries as $entry)
-            <li>
+            <li class="text-center">
                 <h2>{{ $entry->title }}</h2>
                 <p>{{ $entry->summary }}</p>
                 <p>Publicado el: {{ $entry->published }}</p>
