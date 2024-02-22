@@ -29,4 +29,5 @@ Route::post('/login', [authController::class, 'login'])->name('ns.login.submit')
 
 //Rutas del perfil
 Route::get('/profile', [authController::class, 'showProfile'])->name('ns.profile');
+Route::post('/logout', [authController::class, 'logout'])->name('ns.logout');
 

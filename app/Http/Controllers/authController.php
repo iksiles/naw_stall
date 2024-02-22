@@ -20,6 +20,12 @@ class authController extends Controller
         return view('ns.profile');
     }
 
+    public function logout()
+    {
+        Auth::logout(); // Cerrar sesión
+        return redirect()->action([newsletterController::class, 'index']); // Redirigir al index
+    }
+
     public function register(Request $request)
     {
         // Validar los datos del formulario

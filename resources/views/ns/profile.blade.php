@@ -14,7 +14,10 @@
             <a class="navbar-brand" href="{{ route('ns.index') }}">Index</a>
             <a class="navbar-brand" href="#">Wiki</a>
             <a class="navbar-brand" href="#">Foro</a>
-            <a class="navbar-brand" href="#">Cerrar sesión</a>
+            <form enctype="multipart/form-data" action="{{ route('ns.logout') }}" method="post">
+                @csrf
+                <button class="navbar-brand form-control" type="submit">Cerrar sesión</button>
+            </form>
         </div>
     </nav>
 
