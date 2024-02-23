@@ -178,6 +178,9 @@ module.exports = {
         r4: '16px',
         r5: '24px',
         r6: '48px',
+      },
+      height: {
+        '100': '60px',
       }
     },
     fontFamily: {
