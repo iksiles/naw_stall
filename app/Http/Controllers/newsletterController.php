@@ -19,7 +19,7 @@ class NewsController extends Controller
     public function index()
     {
         // Hacer la solicitud a la API
-        $response = Http::get('https://raw.githubusercontent.com/evroon/msfs-rss/main/feeds/msfs.xml');
+        $response = Http::get('https://raw.githubusercontent.com/evroon/msfs-rss/main/feeds/thresholdx.xml');
 
         // Convertir el contenido XML a un objeto SimpleXMLElement
         $xmlData = simplexml_load_string($response->body(), "SimpleXMLElement", LIBXML_NOCDATA);

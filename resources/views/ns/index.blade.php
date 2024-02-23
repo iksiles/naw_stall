@@ -8,9 +8,6 @@
 </head>
 
 <body class="bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 min-h-screen">
-    
-    
-
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
 
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -106,7 +103,7 @@
                 @if(isset($entry->link))
                     @foreach($entry->link as $link)
                         @if(isset($link['href']))
-                            <img src="{{ $link['href'] }}" alt=".">
+                            <img src="{{ $link['href'] }}" alt="">
                         @endif
                     @endforeach
                 @endif

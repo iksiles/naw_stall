@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\newsletterController;
+use App\Http\Controllers\authController;
+use App\Http\Controllers\planeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +21,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', [HomeController::class, 'index'])->name('ns.index');
-Route::get('/News', [ NewsController::class, 'News'])->name('ns.news');
+//Ruta del index
+Route::get('/index', [newsletterController::class, 'index'])->name('ns.index');
+
+//Rutas de creación de usuario
+Route::get('/login', [authController::class, 'showLoginForm'])->name('ns.login');
+Route::post('/register', [authController::class, 'register'])->name('ns.register');
+Route::post('/login', [authController::class, 'login'])->name('ns.login.submit');
+
+//Rutas del perfil
+Route::get('/profile', [authController::class, 'showProfile'])->name('ns.profile');
+Route::post('/logout', [authController::class, 'logout'])->name('ns.logout');
+
+//Rutas de la wiki
+Route::get('/wiki', [planeController::class, 'wikiIndex'])->name('ns.wiki');
+Route::get('/wiki/{id}/entry', [planeController::class, 'showEntry'])->name('ns.entryP');
+Route::get('/wiki/{id}/entry-Microsoft-flight-simulator', [planeController::class, 'showEntryMsfs'])->name('ns.entryM');
+

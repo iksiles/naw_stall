@@ -19,6 +19,6 @@ class Msfs extends Model
     }
 
     public function Planes() {
-        return $this->belongsTo(Pane::class, 'model_ORG', 'model');
+        return $this->belongsTo(Plane::class, 'model_ORG', 'model');
     }
 }
