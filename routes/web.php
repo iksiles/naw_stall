@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\newsletterController;
 use App\Http\Controllers\authController;
+use App\Http\Controllers\planeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,9 @@ Route::post('/login', [authController::class, 'login'])->name('ns.login.submit')
 //Rutas del perfil
 Route::get('/profile', [authController::class, 'showProfile'])->name('ns.profile');
 Route::post('/logout', [authController::class, 'logout'])->name('ns.logout');
+
+//Rutas de la wiki
+Route::get('/wiki', [planeController::class, 'wikiIndex'])->name('ns.wiki');
+Route::get('/wiki/{id}/entry', [planeController::class, 'showEntry'])->name('ns.entryP');
+Route::get('/wiki/{id}/entry-Microsoft-flight-simulator', [planeController::class, 'showEntryMsfs'])->name('ns.entryM');
 

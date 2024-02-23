@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('ns.index') }}">Index</a>
-            <a class="navbar-brand" href="#">Wiki</a>
+            <a class="navbar-brand" href="{{ route('ns.wiki') }}">Wiki</a>
             <a class="navbar-brand" href="#">Foro</a>
             <form enctype="multipart/form-data" action="{{ route('ns.logout') }}" method="post">
                 @csrf

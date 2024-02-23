@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Naw Stall - Newsletter</title>
+    <title>Naw Stall - {{ $plane->model }}</title>
     @include('ns.layouts.boot')
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
@@ -23,26 +23,26 @@
         @endif
         </div>
     </nav>
-    <h2 class="text-light text-center">Bienvenido a NAW STALL!</h2>
-    <h3 class="text-light text-center">Newsletter</h3>
 
-    <ul class="text-light">
-        @foreach($entries as $entry)
-            <li>
-                <h2>{{ $entry->title }}</h2>
-                <p>{{ $entry->summary }}</p>
-                <p>Publicado el: {{ $entry->published }}</p>
-                <a href="{{ $entry->id }}">Enlace</a>
-                @if(isset($entry->link))
-                    @foreach($entry->link as $link)
-                        @if(isset($link['href']))
-                            <img src="{{ $link['href'] }}" alt="">
-                        @endif
-                    @endforeach
-                @endif
-            </li>
-        @endforeach
-    </ul>
+    <h3 class="text-light">{{ $plane->model }}</h3>
+
+    <article class="text-light text-center">
+    <div id="containetor" class="container d-flex">
+        <img id="portada" src="{{ url('img/plane/'.$plane->img) }}" alt="img">
+        <div id="labeler">
+            <label><strong>Manufacturadora:</strong> {{ $plane->manufact }}</label>
+            <label><strong>Entrada en servicio:</strong> {{ $plane->year }}</label>
+            <label><strong>Peso en vacío:</strong> {{ $plane->weight }}</label>
+            <div class="mx-4">
+                <h3>Variantes</h3>
+            @foreach ($msfs as $vars)
+                <a href="{{ route('ns.entryM', $vars->id) }}">{{ $vars->manufact }} {{ $vars->model }}</a>
+            @endforeach
+            </div>
+        </div>
+    </article>
+
+
 </body>
 
 </html>

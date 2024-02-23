@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Naw Stall - Newsletter</title>
+    <title>Naw Stall - Wiki</title>
     @include('ns.layouts.boot')
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('ns.index') }}">Index</a>
-            <a class="navbar-brand" href="#">Wiki</a>
+            <a class="navbar-brand" href="{{ route('ns.wiki') }}">Wiki</a>
             <a class="navbar-brand" href="#">Foro</a>
             @if (Auth::check()) <!-- Verificar si el usuario ha iniciado sesión -->
             <a href="{{ route('ns.profile') }}" class="navbar-brand">
@@ -27,11 +27,11 @@
     <h3 class="text-light text-center">Wiki</h3>
 
     <article class="text-light text-center">
-        @foreach
+        @foreach ($plane as $planes)
         <li>
-            <img src="{{ url('img/plane/'.$plane->img) }}" alt="">
-            <h2>{{ $plane->manufact }} {{ $plane->model }}</h2>
-            <a href="{{ route('ns.show', $plane->id) }}"></a>
+            <img src="{{ url('img/plane/'.$planes->img) }}" alt="">
+            <h2>{{ $planes->manufact }} {{ $planes->model }}</h2>
+            <a href="{{ route('ns.entryP', $planes->id) }}">Enlace</a>
         </li>
         @endforeach
     </article>
