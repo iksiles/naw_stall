@@ -1,0 +1,5 @@
+INSERT INTO `plane` (`id`, `manufact`, `model`, `year`, `weight`, `img`, `type`, `created_at`, `updated_at`) VALUES (NULL, 'Airbus', '320', '1988', '42600', 'airbus-a320.jpg', 'jpg', NULL, NULL);
+INSERT INTO `plane` (`id`, `manufact`, `model`, `year`, `weight`, `img`, `type`, `created_at`, `updated_at`) VALUES (NULL, 'Airbus', '380', '2007', '267000', 'airbus-a380.jpg', 'jpg', NULL, NULL);
+INSERT INTO `plane` (`id`, `manufact`, `model`, `year`, `weight`, `img`, `type`, `created_at`, `updated_at`) VALUES (NULL, 'Boeing', '747', '1970', '162400', 'boeing-747.jpg', 'jpg', NULL, NULL);
+INSERT INTO `plane` (`id`, `manufact`, `model`, `year`, `weight`, `img`, `type`, `created_at`, `updated_at`) VALUES (NULL, 'Boeing', '737', '1968', '28120', 'boeing-737.jpg', 'jpg', NULL, NULL);
+INSERT INTO `plane` (`id`, `manufact`, `model`, `year`, `weight`, `img`, `type`, `created_at`, `updated_at`) VALUES (NULL, 'Boeing', '777', '1995', '134800', 'boeing-777.jpg', 'jpg', NULL, NULL);
