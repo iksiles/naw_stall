@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\newsletterController;
 use App\Http\Controllers\authController;
 use App\Http\Controllers\planeController;
 
@@ -21,8 +21,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/news', [ NewsController::class, 'news'])->name('ns.news');
 //Ruta del index
-Route::get('/index', [newsletterController::class, 'index'])->name('ns.index');
+Route::get('/index', [HomeController::class, 'index'])->name('ns.index');
 
 //Rutas de creación de usuario
 Route::get('/login', [authController::class, 'showLoginForm'])->name('ns.login');

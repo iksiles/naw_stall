@@ -28,6 +28,6 @@ class NewsController extends Controller
         $entries = $xmlData->entry;
 
         // Pasar los datos a la vista
-        return view('ns.index', ['entries' => $entries]);
+        return view('ns.news', ['entries' => $entries]);
     }
 }
