@@ -15,6 +15,17 @@
                 </a>
 
                 <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <!-- Campo de búsqueda -->
+                    <div class="relative">
+                        <input type="text" class="bg-gray-200 border border-gray-300 rounded-md py-1 px-3 focus:outline-none focus:ring-2 focus:ring-gray-400" placeholder="Buscar...">
+                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <!-- Icono de búsqueda -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.823-4.822M9 17a8 8 0 100-16 8 8 0 000 16z"/>
+                            </svg>
+                        </span>
+                    </div>
+
                     @if (Auth::check()) <!-- Verificar si el usuario ha iniciado sesión -->
                         <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                             <span class="sr-only">Open user menu</span>
@@ -68,12 +79,13 @@
             </div>
         </nav>
 
-        <div class="bg-red-500 text-center py-4">
+
+        <div class="bg-red-500 text-center py-2">
             <h2 class="text-white text-3xl font-bold">Bienvenido a NAW STALL!</h2>
         </div>
 
-        <div class="entry-container h-96 overflow-y-auto my-8">
-            <ul class="grid gap-5 grid-cols-2 grid-rows-4">
+        <div class="entry-container overflow-y-auto my-2" style="height: 500px">
+            <ul class="grid gap-5 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 @foreach($entries as $entry)
                     <li class="entry p-2 bg-white rounded-lg shadow-md m-4">
                         <h2 class="text-lg font-bold mb-1">{{ $entry->title }}</h2>
@@ -92,17 +104,20 @@
             </ul>
         </div>
 
-        <div class="flex justify-between items-center h-auto px-4 py-8 bg-gray-200">
-            <div class="flex items-center">
+
+        <div class="flex flex-col md:flex-row justify-between items-center h-full px-4 py-5 bg-gray-200">
+            <div class="flex items-center mb-4 md:mb-0">
                 <img src="{{ url('img/Asset 4.png') }}" class="h-16 w-16 mr-4" alt="Imagen Izquierda">
             </div>
-            <h2 class="text-xl font-bold">About Us</h2>
-            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius posuere ligula at elementum. Aliquam et sem ac quam vestibulum tincidunt nec vel justo.</p>
+            <div>
+                <h2 class="text-xl font-bold">About Us</h2>
+                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius posuere ligula at elementum. Aliquam et sem ac quam vestibulum tincidunt nec vel justo.</p>
+            </div>
         </div>
 
-        <footer class="absolute bottom-0 w-full">
+        <footer class="bottom-0 w-full">
             <div class="bg-gray-800 text-white text-center py-4">
-                <p>&copy; 2024gef NAW STALL</p>
+                <p>&copy; 2024 NAW STALL        --->Made By @Syfreia And @Yanqui </p>
             </div>
         </footer>
 
