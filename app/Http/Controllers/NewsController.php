@@ -16,7 +16,7 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function news()
     {
         // Hacer la solicitud a la API
         $response = Http::get('https://raw.githubusercontent.com/evroon/msfs-rss/main/feeds/thresholdx.xml');
@@ -30,4 +30,6 @@ class NewsController extends Controller
         // Pasar los datos a la vista
         return view('ns.news', ['entries' => $entries]);
     }
+
+    
 }

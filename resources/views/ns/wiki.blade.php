@@ -26,7 +26,7 @@
     <h2 class="text-light text-center">Bienvenido a NAW STALL!</h2>
     <h3 class="text-light text-center">Wiki</h3>
 
-    <article class="text-light text-center" style="max-height: 400px; overflow-y: auto;">
+    <article class="text-light text-center">
         @foreach ($plane as $planes)
         <div style="margin-bottom: 20px;">
             <img src="{{ url('img/plane/'.$planes->img) }}" alt="">
