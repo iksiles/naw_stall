@@ -20,6 +20,30 @@ class authController extends Controller
         return view('ns.profile');
     }
 
+    public function saveProfile(Request $request)
+{
+    // dd($request->all());
+    // Verificar si se ha enviado un tema en la solicitud y almacenarlo en la sesión
+    if ($request->has('theme')) {
+        // Guardar tema en la sesión
+        session()->put('theme', $request->theme);
+    }
+
+    // Verificar si se ha enviado un idioma en la solicitud y almacenarlo en la sesión
+    if ($request->has('language')) {
+        // Guardar idioma en la sesión
+        session()->put('locale', $request->language);
+        // Establecer el locale en la aplicación
+        $locale = $request->language;
+        app()->setLocale($locale);
+    }
+
+    // Redirigir de vuelta a la página del perfil
+    return redirect()->route('ns.profile', ['theme' => $request->theme, 'language' => $request->language]);
+}
+
+
+
     public function logout()
     {
         Auth::logout(); // Cerrar sesión

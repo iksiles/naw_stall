@@ -164,18 +164,17 @@ return [
 
     'custom' => [
         'email' => [
-            'required' => 'The email field is required.',
-            'email' => 'The email format is invalid.',
+            'required' => 'El campo de correo electrónico es obligatorio.',
+            'email' => 'El formato del correo electrónico no es válido.',
         ],
         'password' => [
-            'required' => 'The password field is required.',
-            'min' => 'The password must be at least :min characters.',
+            'required' => 'El campo de contraseña es obligatorio.',
+            'min' => 'La contraseña debe tener al menos :min caracteres.',
         ],
         'name' => [
-            'required' => 'The name field is required.',
+            'required' => 'El campo de nombre es obligatorio.',
         ],
     ],
-    
 
     /*
     |--------------------------------------------------------------------------
@@ -191,3 +190,4 @@ return [
     'attributes' => [],
 
 ];
+

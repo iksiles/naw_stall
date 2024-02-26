@@ -164,17 +164,18 @@ return [
 
     'custom' => [
         'email' => [
-            'required' => 'The email field is required.',
-            'email' => 'The email format is invalid.',
+            'required' => 'Posta elektronikoaren eremua beharrezkoa da.',
+            'email' => 'Posta elektronikoaren formatua baliogabea da.',
         ],
         'password' => [
-            'required' => 'The password field is required.',
-            'min' => 'The password must be at least :min characters.',
+            'required' => 'Pasahitza eremua beharrezkoa da.',
+            'min' => 'Pasahitzak gutxienez :min karaktere izan behar ditu.',
         ],
         'name' => [
-            'required' => 'The name field is required.',
+            'required' => 'Izena eremua beharrezkoa da.',
         ],
     ],
+    
     
 
     /*
