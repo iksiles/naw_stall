@@ -85,7 +85,7 @@
 
 
         <div class="bg-red-500 text-center py-2">
-            <h2 class="text-white text-3xl font-bold">{{ __('titles.welcome') }} {{ __('titles.home') }}</h2>
+            <h2 class="text-white text-3xl font-bold">{{ __('titles.welcome') }}</h2>
         </div>
 
         <div class="entry-container overflow-y-auto my-2" style="height: 500px">
