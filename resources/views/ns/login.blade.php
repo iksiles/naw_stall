@@ -2,10 +2,10 @@
 <html>
 
     <head>
-        <title>Naw Stall - Register or Login</title>
+    <title>Naw Stall - {{ __('titles.regis') }}</title>
         @include('ns.layouts.boot')
+        @include('ns.layouts.theme')
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -15,7 +15,7 @@
     @endphp
 
     <div class="text-center mt-3">
-        <p id="membershipText" class="text-light">{{ $formType === 'registro' ? '¿Ya tienes una cuenta?' : '¿No eres miembro?' }}</p>
+        <p id="membershipText" class="text-light">{{ $formType === 'registro' ? __('titles.haveyou') : __('titles.areyou') }}</p>
         <label class="switch">
             <input type="checkbox" id="toggleForm" {{ $formType === 'registro' ? 'checked' : '' }}>
             <span class="slider round"></span>
@@ -23,40 +23,40 @@
     </div>
 
     <div id="loginForm" style="{{ $formType === 'registro' ? 'display:none' : '' }}">
-        <h2 class="text-light text-center">Iniciar sesión</h2>
+        <h2 class="text-light text-center">{{ __('titles.login') }}</h2>
         <form enctype="multipart/form-data" method ="POST" action="{{ route('ns.login.submit') }}">
             @csrf
-            <input class="form-control" type="email" name="email" placeholder="Correo electrónico">
-            @error('')
+            <input class="form-control" type="email" name="email" placeholder="{{ __('buttons.email') }}">
+            @error('email')
             <p class="error-message">{{ $message }}</p>
             @enderror
-            <input class="form-control" type="password" name="password" placeholder="Contraseña">
-            @error('')
+            <input class="form-control" type="password" name="password" placeholder="{{ __('buttons.password') }}">
+            @error('password')
             <p class="error-message">{{ $message }}</p>
             @enderror
-            <button type="submit">Iniciar sesión</button>
+            <button type="submit">{{ __('buttons.login') }}</button>
         </form>
     </div>
 
     <div id="registroForm" style="{{ $formType === 'login' ? 'display:none' : '' }}">
-        <h2 class="text-light text-center">Registrarse</h2>
+        <h2 class="text-light text-center">{{ __('titles.register') }}</h2>
         <form enctype="multipart/form-data" method ="POST" action="{{ route('ns.register') }}">
             @csrf
-            <input class="form-control" type="text" name="name" placeholder="Nombre" value="{{ old('name') }}">
-            @error('')
+            <input class="form-control" type="text" name="name" placeholder="{{ __('buttons.name') }}" value="{{ old('name') }}">
+            @error('name')
             <p class="error-message">{{ $message }}</p>
             @enderror
-            <input class="form-control" type="email" name="email" placeholder="Correo electrónico" value="{{ old('email') }}">
-            @error('')
+            <input class="form-control" type="email" name="email" placeholder="{{ __('buttons.email') }}" value="{{ old('email') }}">
+            @error('email')
             <p class="error-message">{{ $message }}</p>
             @enderror
-            <input class="form-control" type="password" name="password" placeholder="Contraseña">
-            @error('')
+            <input class="form-control" type="password" name="password" placeholder="{{ __('buttons.password') }}">
+            @error('password')
             <p class="error-message">{{ $message }}</p>
             @enderror
-            <label class="form-label text-light">Foto de perfil</label>
+            <label class="form-label text-light">{{ __('buttons.profPhot') }}</label>
             <input class="form-control" type="file" name="img">
-            <button type="submit">Registrarse</button>
+            <button type="submit">{{ __('buttons.register') }}</button>
         </form>
     </div>
 
@@ -69,11 +69,11 @@
             if (this.checked) {
                 loginForm.style.display = 'none';
                 registroForm.style.display = 'block';
-                membershipText.innerText = '¿Ya tienes una cuenta?';
+                membershipText.innerText = '{{ __('titles.haveyou') }}';
             } else {
                 loginForm.style.display = 'block';
                 registroForm.style.display = 'none';
-                membershipText.innerText = '¿No eres miembro?';
+                membershipText.innerText = '{{ __('titles.areyou') }}';
             }
         });
     </script>

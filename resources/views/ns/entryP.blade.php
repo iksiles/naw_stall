@@ -4,8 +4,8 @@
     <head>
         <title>Naw Stall - {{ $plane->model }}</title>
         @include('ns.layouts.boot')
+        @include('ns.layouts.theme')
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -34,7 +34,7 @@
                             <img class="w-8 h-8 rounded-full" src="{{ url('img/profilePic/ikersiles35-at-gmailcom.jpg') }}" alt="user photo">
                         </button>
                     @else
-                        <a class="navbar-brand" href="{{ route('ns.login') }}">Perfil</a>
+                        <a class="navbar-brand" href="{{ route('ns.login') }}">{{ __('titles.profile') }}</a>
                     @endif
 
                     <!-- Dropdown menu -->
@@ -65,13 +65,13 @@
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
                     <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <a href="{{ route('ns.index') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                            <a href="{{ route('ns.index') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{{ __('titles.home') }}</a>
                         </li>
                         <li>
                             <a href="{{ route('ns.news') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">News</a>
                         </li>
                         <li>
-                            <a href="{{ route('ns.wiki') }}" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Wiki</a>
+                            <a href="{{ route('ns.wiki') }}" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">{{ __('titles.wiki') }}</a>
                         </li>
                         <li>
                             <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Forum</a>
@@ -102,17 +102,17 @@
 
                                 <table class="table-auto border border-gray-500">
                                     <tr>
-                                        <td class="border border-gray-500 px-4 py-2"><strong>Entrada en servicio:</strong></td>
+                                        <td class="border border-gray-500 px-4 py-2"><strong>{{ __('planes.entryservice') }}:</strong></td>
                                         <td class="border border-gray-500 px-4 py-2">{{ $plane->year }}</td>
                                     </tr>
 
                                     <tr>
-                                        <td class="border border-gray-500 px-4 py-2"><strong>Peso en vacío:</strong></td>
+                                        <td class="border border-gray-500 px-4 py-2"><strong>{{ __('planes.emptyweight') }}:</strong></td>
                                         <td class="border border-gray-500 px-4 py-2">{{ $plane->weight }} Kg</td>
                                     </tr>
 
                                     <tr>
-                                        <td class="border border-gray-500 px-4 py-2" colspan="2"><strong>Variantes</strong></td>
+                                        <td class="border border-gray-500 px-4 py-2" colspan="2"><strong>{{ __('planes.variants') }}</strong></td>
                                     </tr>
 
                                     @foreach ($msfs as $vars)

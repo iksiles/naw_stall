@@ -163,10 +163,19 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'email' => [
+            'required' => 'The email field is required.',
+            'email' => 'The email format is invalid.',
+        ],
+        'password' => [
+            'required' => 'The password field is required.',
+            'min' => 'The password must be at least :min characters.',
+        ],
+        'name' => [
+            'required' => 'The name field is required.',
         ],
     ],
+    
 
     /*
     |--------------------------------------------------------------------------

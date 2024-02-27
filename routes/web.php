@@ -32,6 +32,7 @@ Route::post('/login', [authController::class, 'login'])->name('ns.login.submit')
 
 //Rutas del perfil
 Route::get('/profile', [authController::class, 'showProfile'])->name('ns.profile');
+Route::post('/profile/save', [authController::class, 'saveProfile'])->name('ns.profile.save');
 Route::post('/logout', [authController::class, 'logout'])->name('ns.logout');
 
 //Rutas de la wiki

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Naw Stall - {{ $msfs->model }}</title>
         @include('ns.layouts.boot')
+        @include('ns.layouts.theme')
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     </head>
 
@@ -35,7 +36,7 @@
                         <img class="w-8 h-8 rounded-full" src="{{ url('img/profilePic/ikersiles35-at-gmailcom.jpg') }}" alt="user photo">
                     </button>
                     @else
-                    <a class="navbar-brand" href="{{ route('ns.login') }}">Perfil</a>
+                    <a class="navbar-brand" href="{{ route('ns.login') }}">{{ __('titles.profile') }}</a>
                     @endif
 
                     <!-- Dropdown menu -->
@@ -66,16 +67,16 @@
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
                     <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <a href="{{ route('ns.index') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                            <a href="{{ route('ns.index') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{{ __('titles.home') }}</a>
                         </li>
                         <li>
                             <a href="{{ route('ns.news') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">News</a>
                         </li>
                         <li>
-                            <a href="{{ route('ns.wiki') }}" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Wiki</a>
+                            <a href="{{ route('ns.wiki') }}" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">{{ __('titles.wiki') }}</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Forum</a>
+                            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{{ __('titles.forum') }}</a>
                         </li>
                     </ul>
                 </div>
@@ -98,54 +99,53 @@
                     <table class="w-full border-collapse border border-gray-300">
                         <tbody>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Manufacturadora:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.manufacturer') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->manufact }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Entrada en servicio:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.entryservice') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->year }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Peso en vacío:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.emptyweight') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->weight }}kg</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Tipo de motor:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.enginetype') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->engineType }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Manufacturador/es del o de los motor/es:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.enginemanu') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->engineManu }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Capacidad de carga:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.cargocap') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->cargo }}kg</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Capacidad de pasajeros:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.passcap') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->travelNum }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Capacidad de combustible máxima:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.fuelmaxcap') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->fuelCap }}l</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Techo de vuelo:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.maxalt') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->maxAlt }}m</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Velocidad máxima:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.maxvel') }}:</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->maxVel }}km/h</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>Rango de vuelo:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.flyrange') }}  :</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->flyRange }}km</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </article>
-
         </div>
 
         <footer class="bottom-0 w-full">
