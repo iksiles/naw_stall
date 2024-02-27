@@ -35,10 +35,7 @@
                         <span class="sr-only">Open user menu</span>
                         <img class="w-8 h-8 rounded-full" src="{{ url('img/profilePic/ikersiles35-at-gmailcom.jpg') }}" alt="user photo">
                     </button>
-                    @else
-                    <a class="navbar-brand" href="{{ route('ns.login') }}">{{ __('titles.profile') }}</a>
-                    @endif
-
+                     
                     <!-- Dropdown menu -->
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                         <div class="px-4 py-3">
@@ -55,6 +52,9 @@
                             </li>
                         </ul>
                     </div>
+                    @else
+                    <a class="navbar-brand" href="{{ route('ns.login') }}">{{ __('titles.profile') }}</a>
+                    @endif
 
                     <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
@@ -84,7 +84,7 @@
         </nav>
         
         <!-- Contenido principal -->
-        <div class="flex flex-col md:flex-row bg-red-500 p-4">
+        <div class="flex flex-col md:flex-row  p-4">
         
              <!-- Contenido izquierdo -->
             <div class="w-full sm:w-1/2 flex flex-col items-center">

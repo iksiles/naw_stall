@@ -81,7 +81,7 @@
             </div>
         </nav>
 
-        <div class="flex flex-col md:flex-row bg-red-500 p-4">
+        <div class="flex flex-col md:flex-row  p-4">
 
             <!-- Div que contiene la información de la aeronave -->
             <div class="w-full md:w-1/2 flex flex-col items-center">

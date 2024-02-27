@@ -10,6 +10,8 @@
     </head>
 
     <body class="bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 min-h-screen">
+        
+        <!-- Navegación -->
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex items-center justify-between mx-auto p-2">
                 <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -81,7 +83,7 @@
             </div>
         </nav>
 
-        <div class="bg-red-500 text-center py-2">
+        <div class=" text-center py-2">
             <h2 class="text-white text-3xl font-bold">{{ __('titles.welcome') }}</h2>
             <h3 class="text-light text-center">{{ __('titles.wiki') }}</h3>
         </div>
