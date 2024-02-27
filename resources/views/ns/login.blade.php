@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Naw Stall - Register or Login</title>
-    @include('ns.layouts.boot')
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-
-</head>
+    <head>
+        <title>Naw Stall - Register or Login</title>
+        @include('ns.layouts.boot')
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
 <body class="bg-dark">
     @php

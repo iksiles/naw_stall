@@ -2,12 +2,15 @@
 <html>
 
     <head>
-        <title>Naw Stall</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naw Stall - Home</title>
         @include('ns.layouts.boot')
-        <link rel="stylesheet" href="{{ asset('css/Style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     </head>
 
     <body class="bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 min-h-screen">
+        <!-- Navegación -->
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex items-center justify-between mx-auto p-2">
                 <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -16,23 +19,23 @@
 
                 <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <!-- Campo de búsqueda -->
-                    <div class="relative">
+                    <div class="relative mx-5">
                         <input type="text" class="bg-gray-200 border border-gray-300 rounded-md py-1 px-3 focus:outline-none focus:ring-2 focus:ring-gray-400" placeholder="Buscar...">
                         <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                             <!-- Icono de búsqueda -->
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.823-4.822M9 17a8 8 0 100-16 8 8 0 000 16z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.823-4.822M9 17a8 8 0 100-16 8 8 0 000 16z" />
                             </svg>
                         </span>
                     </div>
 
                     @if (Auth::check()) <!-- Verificar si el usuario ha iniciado sesión -->
-                        <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-                            <span class="sr-only">Open user menu</span>
-                            <img class="w-8 h-8 rounded-full" src="{{ url('img/profilePic/ikersiles35-at-gmailcom.jpg') }}" alt="user photo">
-                        </button>
+                    <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-8 h-8 rounded-full" src="{{ url('img/profilePic/ikersiles35-at-gmailcom.jpg') }}" alt="user photo">
+                    </button>
                     @else
-                        <a class="navbar-brand" href="{{ route('ns.login') }}">Perfil</a>
+                    <a class="navbar-brand" href="{{ route('ns.login') }}">Perfil</a>
                     @endif
 
                     <!-- Dropdown menu -->
@@ -55,7 +58,7 @@
                     <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </svg>
                     </button>
                 </div>
@@ -87,19 +90,19 @@
         <div class="entry-container overflow-y-auto my-2" style="height: 500px">
             <ul class="grid gap-5 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 @foreach($entries as $entry)
-                    <li class="entry p-2 bg-white rounded-lg shadow-md m-4">
-                        <h2 class="text-lg font-bold mb-1">{{ $entry->title }}</h2>
-                        <p class="text-sm text-gray-700">{{ $entry->summary }}</p>
-                        <p class="text-xs text-gray-500">Publicado el: {{ $entry->published }}</p>
-                        <a href="{{ $entry->id }}" class="text-blue-500 text-xs">Enlace</a>
-                        @if(isset($entry->link))
-                            @foreach($entry->link as $link)
-                                @if(isset($link['href']))
-                                <img src="{{ $link['href'] }}" alt="" class="mt-2">
-                                @endif
-                            @endforeach
-                        @endif
-                    </li>
+                <li class="entry p-2 bg-white rounded-lg shadow-md m-4">
+                    <h2 class="text-lg font-bold mb-1">{{ $entry->title }}</h2>
+                    <p class="text-sm text-gray-700">{{ $entry->summary }}</p>
+                    <p class="text-xs text-gray-500">Publicado el: {{ $entry->published }}</p>
+                    <a href="{{ $entry->id }}" class="text-blue-500 text-xs">Enlace</a>
+                    @if(isset($entry->link))
+                    @foreach($entry->link as $link)
+                    @if(isset($link['href']))
+                    <img src="{{ $link['href'] }}" alt="" class="mt-2">
+                    @endif
+                    @endforeach
+                    @endif
+                </li>
                 @endforeach
             </ul>
         </div>
@@ -117,7 +120,7 @@
 
         <footer class="bottom-0 w-full">
             <div class="bg-gray-800 text-white text-center py-4">
-                <p>&copy; 2024 NAW STALL        --->Made By @Syfreia And @Yanqui </p>
+                <p>&copy; 2024 NAW STALL --->Made By @Syfreia And @Yanqui </p>
             </div>
         </footer>
 

@@ -2,12 +2,15 @@
 <html>
 
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Naw Stall - Newsletter</title>
         @include('ns.layouts.boot')
         <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     </head>
 
     <body class="bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 min-h-screen">
+        <!-- Navegación -->
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex items-center justify-between mx-auto p-2">
                 <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -16,7 +19,7 @@
 
                 <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <!-- Campo de búsqueda -->
-                    <div class="relative">
+                    <div class="relative mx-5">
                         <input type="text" class="bg-gray-200 border border-gray-300 rounded-md py-1 px-3 focus:outline-none focus:ring-2 focus:ring-gray-400" placeholder="Buscar...">
                         <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                             <!-- Icono de búsqueda -->
@@ -79,17 +82,16 @@
             </div>
         </nav>
 
-
         <div class="bg-red-500 text-center py-2">
             <h2 class="text-white text-3xl font-bold">Latest news about MSFS and Addons</h2>
         </div>
 
-        <div class="entry-container overflow-y-auto my-9" style="height: 600px">
+        <div class="entry-container overflow-y-auto my-9 mx-4 sm:mx-auto max-w-screen-2xl" style="height: auto">
             <ul class="grid gap-1 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 @foreach($entries as $entry)
                 <li class="entry p-2 bg-white rounded-lg shadow-md m-4">
                     <h2 class="text-lg font-bold mb-1">{{ $entry->title }}</h2>
-                    <div class="h-60 overflow-y-auto custom-scrollbar">
+                    <div class="h-40 sm:h-32 md:h-24 overflow-y-auto custom-scrollbar">
                         <p class="text-sm text-gray-700">{{ $entry->summary }}</p>
                     </div>
                     <p class="text-xs text-gray-500">Publicado el: {{ $entry->published }}</p>
@@ -108,7 +110,7 @@
 
         <footer class="bottom-0 w-full">
             <div class="bg-gray-800 text-white text-center py-4">
-                <p>&copy; 2024 NAW STALL        --->Made By @Syfreia And @Yanqui </p>
+                <p>&copy; 2024 NAW STALL --->Made By @Syfreia And @Yanqui </p>
             </div>
         </footer>
 
