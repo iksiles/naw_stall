@@ -47,7 +47,7 @@ class authController extends Controller
     public function logout()
     {
         Auth::logout(); // Cerrar sesión
-        return redirect()->action([newsletterController::class, 'index']); // Redirigir al index
+        return redirect()->action([HomeController::class, 'index']); // Redirigir al index
     }
 
     public function register(Request $request)
@@ -74,14 +74,17 @@ class authController extends Controller
 
             $user->img = $nomImg;
             $user->type = $img->guessExtension();
+        } else {
+            $user->img = "default.png";
+            $user->type = "png";
         }
-        $user->save();
+            $user->save();
 
         // Iniciar sesión automáticamente después del registro
         Auth::login($user);
 
         // Redireccionar a la página de inicio o a donde desees
-        return redirect()->action([newsletterController::class, 'index']);
+        return redirect()->action([HomeController::class, 'index']);
     }
 
     public function login(Request $request)
@@ -91,7 +94,7 @@ class authController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Autenticación exitosa, redirigir a la página de inicio
-            return redirect()->action([newsletterController::class, 'index']);
+            return redirect()->action([HomeController::class, 'index']);
         }
 
         // Si las credenciales son incorrectas, volver al formulario de inicio de sesión con un mensaje de error

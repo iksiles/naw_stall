@@ -23,5 +23,8 @@ return [
     'email' => 'Email',
     'password' => 'Password',
     'profPhot' => 'Profile Photo',
+    'settings' => 'Settings',
+    'mainmenu' => 'Open main menu',
+    'usermenu' => 'Open user menu',
 
 ];

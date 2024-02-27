@@ -23,5 +23,8 @@ return [
     'email' => 'Correo Electrónico',
     'password' => 'Contraseña',
     'profPhot' => 'Foto de Perfil',
+    'settings' => 'Ajustes',
+    'mainmenu' => 'Abrir menú principal',
+    'usermenu' => 'Abrir menú de usuario',
 
 ];

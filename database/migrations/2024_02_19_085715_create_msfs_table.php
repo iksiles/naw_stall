@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('model_ORG', 40)->index();
             $table->foreign('model_ORG')->references('model')->on('plane')->onUpdate('cascade')->onDelete('restrict');
             $table->string('engineType', 40);
-            $table->string('engineManu', 40);
+            $table->string('engineManu', 75);
             $table->integer('cargo');
             $table->integer('travelNum');
             $table->integer('fuelCap');

@@ -23,5 +23,8 @@ return [
     'email' => 'Helbide Elektronikoa',
     'password' => 'Pasahitza',
     'profPhot' => 'Profila Argazkia',
+    'settings' => 'Ezarpenak',
+    'mainmenu' => 'Ireki menu nagusia',
+    'usermenu' => 'Ireki erabiltzaile menua',
 
 ];
