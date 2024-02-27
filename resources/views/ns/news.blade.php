@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Naw Stall - Newsletter</title>
+        <title>Naw Stall - {{ __('titles.newsletter') }}</title>
         @include('ns.layouts.boot')
         <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     </head>
@@ -66,16 +66,16 @@
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
                     <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <a href="{{ route('ns.index') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                            <a href="{{ route('ns.index') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{{ __('titles.home') }}</a>
                         </li>
                         <li>
-                            <a href="{{ route('ns.news') }}" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">News</a>
+                            <a href="{{ route('ns.news') }}" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">{{ __('titles.newsest') }}</a>
                         </li>
                         <li>
-                            <a href="{{ route('ns.wiki') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Wiki</a>
+                            <a href="{{ route('ns.wiki') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{{ __('titles.wiki') }}</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Forum</a>
+                            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{{ __('titles.forum') }}</a>
                         </li>
                     </ul>
                 </div>
@@ -83,7 +83,7 @@
         </nav>
 
         <div class="bg-red-500 text-center py-2">
-            <h2 class="text-white text-3xl font-bold">Latest news about MSFS and Addons</h2>
+            <h2 class="text-white text-3xl font-bold">{{ __('titles.news') }}</h2>
         </div>
 
         <div class="entry-container overflow-y-auto my-9 mx-4 sm:mx-auto max-w-screen-2xl" style="height: auto">
@@ -95,11 +95,11 @@
                         <p class="text-sm text-gray-700">{{ $entry->summary }}</p>
                     </div>
                     <p class="text-xs text-gray-500">Publicado el: {{ $entry->published }}</p>
-                    <a href="{{ $entry->id }}" class="text-blue-500 text-xs">Enlace</a>
+                    <a href="{{ $entry->id }}" class="text-blue-500 text-xs">{{ __('titles.link') }}</a>
                     @if(isset($entry->link))
                     @foreach($entry->link as $link)
                     @if(isset($link['href']))
-                    <img src="{{ $link['href'] }}" alt="." class="mt-2">
+                    <img src="{{ $link['href'] }}" alt="" class="mt-2">
                     @endif
                     @endforeach
                     @endif
@@ -110,7 +110,7 @@
 
         <footer class="bottom-0 w-full">
             <div class="bg-gray-800 text-white text-center py-4">
-                <p>&copy; 2024 NAW STALL --->Made By @Syfreia And @Yanqui </p>
+                <p>&copy; 2024 NAW STALL --->{{ __('buttons.footer') }} </p>
             </div>
         </footer>
 

@@ -10,7 +10,12 @@ return [
 
     'welcome' => 'Ongi etorri NAW STALL-ra!',
     'welprof' => 'Zure profila! Ongi etorri pilotoa!',
+    'news' => 'MSFS eta Gehigarrien Berriak',
+    'newsletter' => 'Newsletter-a',
+    'footer' => 'Eginda @Syfreia eta @Yanqui baizik',
     'home' => 'Hasiera',
+    'newsest' => 'Berriak',
+    'about' => 'Guri Buruz',
     'wiki' => 'Wiki',
     'forum' => 'Foroa',
     'profile' => 'Profila',

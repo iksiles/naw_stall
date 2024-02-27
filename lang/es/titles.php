@@ -10,6 +10,11 @@ return [
 
     'welcome' => '¡Bienvenido a NAW STALL!',
     'welprof' => 'Tu perfil! Bienvenido piloto!',
+    'news' => 'Ultimas noticias sobre MSFS y añadidos',
+    'newsletter' => 'Newsletter',
+    'newsest' => 'Noticias',
+    'about' => 'Sobre Nosotros',
+    'footer' => 'Hecho por @Syfreia y @Yanqui',
     'home' => 'Inicio',
     'wiki' => 'Wiki',
     'forum' => 'Foro',

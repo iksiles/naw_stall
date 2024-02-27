@@ -10,6 +10,11 @@ return [
 
     'welcome' => 'Welcome to NAW STALL!',
     'welprof' => 'Your profile! Welcome pilot!',
+    'news' => 'Latest news about MSFS and Addons',
+    'newsest' => 'News',
+    'about' => 'About Us',
+    'newsletter' => 'Newsletter',
+    'footer' => 'Made By @Syfreia And @Yanqui',
     'home' => 'Home',
     'wiki' => 'Wiki',
     'forum' => 'Forum',
