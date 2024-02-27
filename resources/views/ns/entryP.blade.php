@@ -33,7 +33,7 @@
         <div id="labeler">
             <label><strong>{{ __('planes.manufacturer') }}</strong> {{ $plane->manufact }}</label>
             <label><strong>{{ __('planes.entryservice') }}</strong> {{ $plane->year }}</label>
-            <label><strong>{{ __('planes.emptyweight') }}</strong> {{ $plane->weight }}</label>
+            <label><strong>{{ __('planes.emptyweight') }}</strong> {{ $plane->weight }}kg</label>
             <div class="mx-4">
                 <h3>{{ __('planes.variants') }}</h3>
             @foreach ($msfs as $vars)

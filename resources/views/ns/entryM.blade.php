@@ -12,6 +12,7 @@
 <body class="bg-dark">
     <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
+            <a class="navbar-brand" href="{{ back()->getTargetUrl() }}"><-</a>
             <a class="navbar-brand" href="{{ route('ns.index') }}">{{ __('titles.home') }}</a>
             <a class="navbar-brand" href="{{ route('ns.wiki') }}">{{ __('titles.wiki') }}</a>
             <a class="navbar-brand" href="#">{{ __('titles.forum') }}</a>
