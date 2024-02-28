@@ -127,4 +127,11 @@
 
     </body>
 
+        <script>
+            document.getElementById('user-menu-button').addEventListener('click', function() {
+                var dropdownMenu = document.getElementById('user-dropdown');
+                dropdownMenu.classList.toggle('hidden');
+            });
+        </script>
+
 </html>

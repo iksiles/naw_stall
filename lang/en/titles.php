@@ -13,7 +13,7 @@ return [
     'news' => 'Latest news about MSFS and Addons',
     'newsest' => 'News',
     'about' => 'About Us',
-    'newsletter' => 'Newsletter',
+    'newsletter' => 'News',
     'footer' => 'Made By @Syfreia And @Yanqui',
     'home' => 'Home',
     'wiki' => 'Wiki',
