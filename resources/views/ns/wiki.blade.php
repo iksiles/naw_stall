@@ -44,10 +44,13 @@
 
                         <ul class="py-2" aria-labelledby="user-menu-button">
                             <li>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{{ __('buttons.settings') }}</a>
+                                <a href="{{ route('ns.profile') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-center">{{ __('buttons.settings') }}</a>
                             </li>
                             <li>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{{ __('buttons.logout') }}</a>
+                                <form enctype="multipart/form-data" action="{{ route('ns.logout') }}" method="post">
+                                    @csrf
+                                    <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full" type="submit">{{ __('titles.logout') }}</button>
+                                </form>
                             </li>
                         </ul>
                     </div>

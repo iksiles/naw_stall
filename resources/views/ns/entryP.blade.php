@@ -96,9 +96,8 @@
 
                     <div class="flex flex-col justify-between h-full">
 
-                        <div class="flex mx-10 mt-16 bg-red-50">
+                        <div class="mx-10 mt-16 bg-red-50 flex flex-row">
                             <div class="overflow-x-auto">
-
                                 <table class="table-auto border border-gray-500">
                                     <tr>
                                         <td class="border border-gray-500 px-4 py-2"><strong>{{ __('planes.entryservice') }}</strong></td>
@@ -121,15 +120,13 @@
                                             </td>
                                         </tr>
                                     @endforeach
-                                    
-                                    <tr>
-                                        <td>
-                                            <img src="{{ url('img/manufacturer/'.$plane->manufact.'.png') }}" alt="" srcset="">
-                                        </td>
-                                    </tr>
+                                
                                 </table>
-
+                                
                             </div>
+                                <div class="mx-auto">
+                                    <img src="{{ url('img/manufacturer/'.$plane->manufact.'.png') }}" alt="" class="w-52" />
+                                </div>
                         </div>
 
                         <div class="mx-auto mt-8 max-w-lg">
