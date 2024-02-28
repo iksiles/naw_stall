@@ -96,38 +96,40 @@
 
                     <div class="flex flex-col justify-between h-full">
 
-                        <div class="mx-10 mt-16 bg-red-50 flex flex-row">
-                            <div class="overflow-x-auto">
-                                <table class="table-auto border border-gray-500">
-                                    <tr>
-                                        <td class="border border-gray-500 px-4 py-2"><strong>{{ __('planes.entryservice') }}</strong></td>
-                                        <td class="border border-gray-500 px-4 py-2">{{ $plane->year }}</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="border border-gray-500 px-4 py-2"><strong>{{ __('planes.emptyweight') }}</strong></td>
-                                        <td class="border border-gray-500 px-4 py-2">{{ $plane->weight }} Kg</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="border border-gray-500 px-4 py-2" colspan="2"><strong>{{ __('planes.variants') }}</strong></td>
-                                    </tr>
-
-                                    @foreach ($msfs as $vars)
+                        <div class="mx-10 mt-16 bg-red-50 flex justify-center items-center rounded-lg">
+                            <div class="flex flex-row justify-center items-center">
+                                <!-- Tabla -->
+                                <div class="w-1/2 p-2">
+                                    <table class="table-auto border border-gray-500">
                                         <tr>
-                                            <td class="border border-gray-500 px-4 py-2" colspan="2">
-                                                <a href="{{ route('ns.entryM', $vars->id) }}" class="text-blue-500 italic">{{ $vars->manufact }} {{ $vars->model }}</a>
-                                            </td>
+                                            <td class="border border-gray-500 px-4 py-2"><strong>{{ __('planes.entryservice') }}</strong></td>
+                                            <td class="border border-gray-500 px-4 py-2">{{ $plane->year }}</td>
                                         </tr>
-                                    @endforeach
-                                
-                                </table>
-                                
-                            </div>
-                                <div class="mx-auto">
-                                    <img src="{{ url('img/manufacturer/'.$plane->manufact.'.png') }}" alt="" class="w-52" />
+                                        <tr>
+                                            <td class="border border-gray-500 px-4 py-2"><strong>{{ __('planes.emptyweight') }}</strong></td>
+                                            <td class="border border-gray-500 px-4 py-2">{{ $plane->weight }} Kg</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-500 px-4 py-2" colspan="2"><strong>{{ __('planes.variants') }}</strong></td>
+                                        </tr>
+                                        @foreach ($msfs as $vars)
+                                            <tr>
+                                                <td class="border border-gray-500 px-4 py-2" colspan="2">
+                                                    <a href="{{ route('ns.entryM', $vars->id) }}" class="text-blue-500 italic">{{ $vars->manufact }} {{ $vars->model }}</a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </table>
                                 </div>
+
+                                <!-- Imagen -->
+                                <div class="ml-4 flex justify-center items-center">
+                                    <img src="{{ url('img/manufacturer/'.$plane->manufact.'.png') }}" alt="" class="w-1/2" />
+                                </div>
+                            </div>
                         </div>
+
+
 
                         <div class="mx-auto mt-8 max-w-lg">
                             <div class="bg-white rounded-lg shadow-lg p-6">
