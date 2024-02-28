@@ -86,7 +86,7 @@
             </div>
         </nav>
 
-        <div class="bg-red-500 text-center py-2">
+        <div class=" text-center py-2">
             <h2 class="text-white text-3xl font-bold">{{ __('titles.news') }}</h2>
         </div>
 
