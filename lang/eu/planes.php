@@ -20,5 +20,6 @@ return [
     'maxalt' => 'Garaiera handiena:',
     'maxvel' => 'Abiadura maximoa:',
     'flyrange' => 'Hegaldiaren eremua:',
+    'pdf' => 'Hegazkinen instrukzioak:',
 
 ];

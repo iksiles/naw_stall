@@ -20,5 +20,6 @@ return [
     'maxalt' => 'Maximum altitude:',
     'maxvel' => 'Top speed:',
     'flyrange' => 'Fly range:',
+    'pdf' => 'Flight instructions:',
 
 ];

@@ -17,13 +17,9 @@ use App\Http\Controllers\planeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/news', [ NewsController::class, 'news'])->name('ns.news');
 //Ruta del index
-Route::get('/index', [HomeController::class, 'index'])->name('ns.index');
+Route::get('/', [HomeController::class, 'index'])->name('ns.index');
 
 //Rutas de creación de usuario
 Route::get('/login', [authController::class, 'showLoginForm'])->name('ns.login');

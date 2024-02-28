@@ -148,6 +148,12 @@
                                 <td class="border border-gray-300 p-2"><strong>{{ __('planes.flyrange') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->flyRange }}km</td>
                             </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.pdf') }}</strong></td>
+                                <td  class="border border-gray-300 p-2">
+                                    <a href="{{ url('pdf/'.$msfs->manufact.'_'.$msfs->model.'.pdf') }}">{{ $msfs->manufact.'_'.$msfs->model.'.pdf' }}</a>
+                                </td> 
+                            </tr>
                         </tbody>
                     </table>
                 </div>

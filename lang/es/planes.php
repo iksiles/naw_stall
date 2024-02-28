@@ -20,5 +20,6 @@ return [
     'maxalt' => 'Techo de vuelo:',
     'maxvel' => 'Velocidad máxima:',
     'flyrange' => 'Rango de vuelo:',
+    'pdf' => 'Instrucciones de vuelo:',
 
 ];
