@@ -121,7 +121,7 @@
 
         <footer class="bottom-0 w-full">
             <div class="bg-gray-800 text-white text-center py-4">
-                <p>&copy; 2024 NAW STALL --->{{ __('buttons.footer') }} </p>
+                <p>&copy; 2024 NAW STALL --->{{ __('titles.footer') }} </p>
             </div>
         </footer>
 

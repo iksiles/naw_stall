@@ -102,47 +102,47 @@
                     <table class="w-full border-collapse border border-gray-300">
                         <tbody>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.manufacturer') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.manufacturer') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->manufact }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.entryservice') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.entryservice') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->year }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.emptyweight') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.emptyweight') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->weight }}kg</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.enginetype') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.enginetype') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->engineType }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.enginemanu') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.enginemanu') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->engineManu }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.cargocap') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.cargocap') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->cargo }}kg</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.passcap') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.passcap') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->travelNum }}</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.fuelmaxcap') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.fuelmaxcap') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->fuelCap }}l</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.maxalt') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.maxalt') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->maxAlt }}m</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.maxvel') }}:</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.maxvel') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->maxVel }}km/h</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.flyrange') }}  :</strong></td>
+                                <td class="border border-gray-300 p-2"><strong>{{ __('planes.flyrange') }}</strong></td>
                                 <td class="border border-gray-300 p-2">{{ $msfs->flyRange }}km</td>
                             </tr>
                         </tbody>
@@ -153,7 +153,7 @@
 
         <footer class="bottom-0 w-full">
             <div class="bg-gray-800 text-white text-center py-4">
-                <p>&copy; 2024 NAW STALL -->{{ __('buttons.footer') }} </p>
+                <p>&copy; 2024 NAW STALL --->{{ __('titles.footer') }} </p>
             </div>
         </footer>
         
