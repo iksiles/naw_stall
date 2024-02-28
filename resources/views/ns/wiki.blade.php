@@ -31,30 +31,30 @@
                     </div>
 
                     @if (Auth::check()) <!-- Verificar si el usuario ha iniciado sesión -->
-                        <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                        <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" aria-controls="user-dropdown">
                             <span class="sr-only">Open user menu</span>
                             <img class="w-8 h-8 rounded-full" src="{{ url('img/profilePic/ikersiles35-at-gmailcom.jpg') }}" alt="user photo">
                         </button>
+
+                        <!-- Dropdown menu -->
+                        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+                            <div class="px-4 py-3">
+                                <span class="block text-sm text-gray-900 dark:text-white">Username</span>
+                                <span class="block text-sm text-gray-500 truncate dark:text-gray-400">name@gmail.com</span>
+                            </div>
+
+                            <ul class="py-2" aria-labelledby="user-menu-button">
+                                <li>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Ajustes</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                                </li>
+                            </ul>
+                        </div>
                     @else
                         <a class="navbar-brand" href="{{ route('ns.login') }}">{{ __('titles.profile') }}</a>
                     @endif
-
-                    <!-- Dropdown menu -->
-                    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-                        <div class="px-4 py-3">
-                            <span class="block text-sm text-gray-900 dark:text-white">Username</span>
-                            <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@gmail.com</span>
-                        </div>
-
-                        <ul class="py-2" aria-labelledby="user-menu-button">
-                            <li>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Ajustes</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
-                            </li>
-                        </ul>
-                    </div>
 
                     <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
@@ -106,6 +106,13 @@
             </div>
         </footer>
         
+        <script>
+            document.getElementById('user-menu-button').addEventListener('click', function() {
+                var dropdownMenu = document.getElementById('user-dropdown');
+                dropdownMenu.classList.toggle('hidden');
+            });
+        </script>
+
     </body>
 
 </html>
