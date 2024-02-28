@@ -35,9 +35,6 @@
                         <span class="sr-only">{{ __('buttons.usermenu') }}</span>
                         <img class="w-8 h-8 rounded-full" src="{{ url('img/profilePic/'.Auth::user()->img) }}" alt="user photo">
                     </button>
-                    @else
-                    <a class="navbar-brand" href="{{ route('ns.login') }}">{{ __('titles.profile') }}</a>
-                    @endif
 
                     <!-- Dropdown menu -->
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
@@ -55,6 +52,9 @@
                             </li>
                         </ul>
                     </div>
+                    @else
+                    <a class="navbar-brand" href="{{ route('ns.login') }}">{{ __('titles.profile') }}</a>
+                    @endif
 
                     <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
                         <span class="sr-only">{{ __('buttons.mainmenu') }}</span>
@@ -84,7 +84,7 @@
         </nav>
 
 
-        <div class="bg-red-500 text-center py-2">
+        <div class=" text-center py-2">
             <h2 class="text-white text-3xl font-bold">{{ __('titles.welcome') }}</h2>
         </div>
 
