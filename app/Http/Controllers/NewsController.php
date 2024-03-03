@@ -16,6 +16,8 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // Función que muestra la API de la pagina News
     public function news()
     {
         // Hacer la solicitud a la API

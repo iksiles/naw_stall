@@ -11,6 +11,8 @@ return new class extends Migration
      *
      * @return void
      */
+
+    // Creación de la tabla de los modelos de Microsoft Flight Simulator que tiene una relación 1:M con los modelos reales de aviones
     public function up()
     {
         Schema::create('msfs', function (Blueprint $table) {

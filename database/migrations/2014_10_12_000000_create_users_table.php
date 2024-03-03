@@ -11,6 +11,8 @@ return new class extends Migration
      *
      * @return void
      */
+
+    // Creación de la tabla usuarios, modificada para aceptar imagenes
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {

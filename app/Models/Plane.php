@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+// Modelo de la tabla que usa los aviones reales
 class Plane extends Model
 {
     use HasFactory;
@@ -38,6 +39,7 @@ class Plane extends Model
         return Plane::find($weight);
     }
 
+    // Uso de la relación con Msfs
     public function obtenerMsfs() {
         return $this->hasMany(Msfs::class);
     }

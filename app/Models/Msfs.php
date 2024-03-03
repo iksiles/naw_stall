@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+// Modelo de la tabla que usa los aviones de Microsoft Flight Simulator
 class Msfs extends Model
 {
     use HasFactory;
@@ -18,6 +20,7 @@ class Msfs extends Model
         return Msfs::all();
     }
 
+    // Uso de la relación con el modelo Planes
     public function Planes() {
         return $this->belongsTo(Plane::class, 'model_ORG', 'model');
     }

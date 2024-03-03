@@ -10,11 +10,13 @@ use Auth;
 
 class authController extends Controller
 {
+    // Funcion que muestra el login
     public function showLoginForm()
     {
         return view('ns.login', ['formType' => 'login']);
     }
 
+    // Funcion que muestra el perfil
     public function showProfile()
     {
         return view('ns.profile');
@@ -22,7 +24,6 @@ class authController extends Controller
 
     public function saveProfile(Request $request)
 {
-    // dd($request->all());
     // Verificar si se ha enviado un tema en la solicitud y almacenarlo en la sesión
     if ($request->has('theme')) {
         // Guardar tema en la sesión
@@ -43,13 +44,14 @@ class authController extends Controller
 }
 
 
-
+    // Funcion para cerrar la sesión
     public function logout()
     {
         Auth::logout(); // Cerrar sesión
         return redirect()->action([HomeController::class, 'index']); // Redirigir al index
     }
 
+    // Función para registrar el usuario
     public function register(Request $request)
     {
         // Validar los datos del formulario
@@ -65,6 +67,7 @@ class authController extends Controller
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
 
+        // Si se ha enviado una foto
         if ($request->hasFile("img")){
             $img = $request->file("img");
             $nomImg = Str::slug($request->email).".".$img->guessExtension();
@@ -74,6 +77,7 @@ class authController extends Controller
 
             $user->img = $nomImg;
             $user->type = $img->guessExtension();
+        // Si NO se ha enviado una foto
         } else {
             $user->img = "default.png";
             $user->type = "png";

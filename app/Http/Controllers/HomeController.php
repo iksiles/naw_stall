@@ -16,6 +16,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // Función que muestra la API de la pagina Home
     public function index()
     {
         // Hacer la solicitud a la API

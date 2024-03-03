@@ -15,6 +15,7 @@ class Languages
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
+    // Función que provoca que cambie el idioma dentro de la aplicación
     public function handle(Request $request, Closure $next)
     {
         App::setLocale(session('locale'));

@@ -16,9 +16,8 @@ use App\Http\Controllers\planeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/news', [ NewsController::class, 'news'])->name('ns.news');
 //Ruta del index
+Route::get('/news', [ NewsController::class, 'news'])->name('ns.news');
 Route::get('/', [HomeController::class, 'index'])->name('ns.index');
 
 //Rutas de creación de usuario
